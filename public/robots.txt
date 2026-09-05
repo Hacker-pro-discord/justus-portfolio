@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://justus-dieckman.sage-swift-4852.chatgpt.site/sitemap.xml
