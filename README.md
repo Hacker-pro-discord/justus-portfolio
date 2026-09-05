@@ -2,7 +2,7 @@
 
 A personal portfolio for freelance work, networking, and publicly inspectable projects.
 
-- Live: https://justus-dieckman.sage-swift-4852.chatgpt.site
+- Live: https://justus-dieckman.justerman.chatgpt.site
 - GitHub: https://github.com/Hacker-pro-discord/justus-portfolio
 - Contact: https://contra.com/justus_dieckman_a7ziair6
 
@@ -55,5 +55,3 @@ Jinx is described as a triage utility, not an antivirus replacement. Image analy
 ## Validation
 
 Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing. Sites publication is a separate deployment step; pushing to GitHub alone does not automatically redeploy this site.
-
-
