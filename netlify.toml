@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build && npm test"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "22.22.0"
+  # This is a static Vinext export, not a Next.js server deployment.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
