@@ -9,10 +9,10 @@ import {
   ScanEye,
   Rss,
   Boxes,
-  Braces,
 } from 'lucide-react';
 const github = 'https://github.com/Hacker-pro-discord';
-const contra = 'https://contra.com/justus_dieckman_a7zjair6';
+const contra = 'https://contra.com/justus_dieckman_a7ziair6';
+const email = 'mailto:dieckmanjustus@gmail.com';
 const projects = [
   {
     id: 'jinx',
@@ -156,9 +156,22 @@ export default function Home() {
       </header>
       <main id="main">
         <section className="hero section-wrap" aria-labelledby="hero-title">
+          <picture className="vortex-art">
+            <source
+              media="(max-width: 700px)"
+              srcSet="/images/vortex-mobile.webp"
+            />
+            <img
+              src="/images/vortex.webp"
+              alt="Original illustration of a blue telephone box flying through a swirling blue time vortex"
+              width="1536"
+              height="1024"
+              fetchPriority="high"
+            />
+          </picture>
           <div className="hero-copy">
             <p className="eyebrow">
-              <span className="status-dot" /> INDEPENDENT DEVELOPER
+              <span className="status-dot" /> DEVELOPER. TINKERER. EXPLORER.
             </p>
             <h1 id="hero-title">
               Justus
@@ -167,9 +180,9 @@ export default function Home() {
             </h1>
             <p className="role">Python / JavaScript / TypeScript</p>
             <h2>
-              Focused tools.
+              Code, curiosity,
               <br />
-              <span>Working software.</span>
+              <span>& a little time travel.</span>
             </h2>
             <p className="hero-description">
               I build desktop tools, automation, and AI workflows that solve
@@ -193,25 +206,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-orbit" aria-hidden="true">
-            <div className="orbit-grid" />
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="orbit orbit-three" />
-            <div className="orbit-core">
-              <Braces size={68} strokeWidth={1} />
-            </div>
-            <span className="orbit-note note-one">DESKTOP TOOLS</span>
-            <span className="orbit-note note-two">LOCAL AI</span>
-            <span className="orbit-note note-three">AUTOMATION</span>
-            <span className="orbit-coordinate">
-              IDEA → CODE → SOMETHING USEFUL
-            </span>
-          </div>
         </section>
         <div className="skill-strip">
           <div className="section-wrap">
-            <span>BUILT WITH INTENT</span>
+            <span>MY TOOLKIT</span>
             <p>
               Python <i /> JavaScript <i /> TypeScript <i /> Node.js <i /> Local
               AI
@@ -225,8 +223,8 @@ export default function Home() {
         >
           <div className="section-heading">
             <div>
-              <p className="eyebrow">01 / SELECTED WORK</p>
-              <h2 id="work-title">The work speaks.</h2>
+              <p className="eyebrow">01 / THE PROJECT ARCHIVE</p>
+              <h2 id="work-title">A few things I’ve built.</h2>
             </div>
             <p>
               Real projects. Public source.
@@ -280,15 +278,15 @@ export default function Home() {
               <div>
                 <p className="eyebrow">02 / WHAT I BUILD</p>
                 <h2>
-                  Small scope.
+                  Something broken?
                   <br />
-                  Clear purpose.
+                  Something to build?
                 </h2>
               </div>
               <p>
-                A useful next step for your project,
+                Scripts, fixes, and the next little feature.
                 <br />
-                with a concrete finish line.
+                Here’s where I can help.
               </p>
             </div>
             <div className="services-grid">
@@ -329,9 +327,9 @@ export default function Home() {
           <div>
             <p className="eyebrow">03 / A LITTLE ABOUT ME</p>
             <h2>
-              Curious by nature.
+              There’s usually
               <br />
-              Practical by choice.
+              another idea.
             </h2>
           </div>
           <div className="about-copy">
@@ -339,6 +337,10 @@ export default function Home() {
               I’m Justus, an independent developer who likes building focused
               software that solves a specific problem. I’d rather make a useful
               tool than turn every idea into a giant platform.
+            </p>
+            <p>
+              And yes, I’m a Doctor Who fan. The blue box and time vortex are a
+              bit of me; the projects below the surface are real.
             </p>
             <p>
               My work spans Python desktop applications, JavaScript and
@@ -360,7 +362,7 @@ export default function Home() {
           </div>
           <div>
             <p className="eyebrow">ALSO EXPLORING / AI & SYSTEMS</p>
-            <h2 id="systems-title">Making AI part of a useful workflow.</h2>
+            <h2 id="systems-title">A few experiments in AI.</h2>
             <p>
               Alongside application development, I work on prompting, structured
               agent workflows, and AI tooling: defining tasks, shaping outputs,
@@ -377,17 +379,25 @@ export default function Home() {
             <span className="status-dot" /> LET’S BUILD SOMETHING USEFUL
           </p>
           <h2>
-            A specific problem?
+            Got an idea?
             <br />
-            <span className="cyan">That’s a good start.</span>
+            <span>Let’s see where it goes.</span>
           </h2>
           <p>
             Tell me what you’re working on, what needs to change,
             <br className="desktop-break" /> and what a finished result should
             look like.
           </p>
-          <a className="button primary" href={contra}>
-            Start a project on Contra <ArrowUpRight size={19} />
+          <div className="contact-actions">
+            <a className="button primary" href={email}>
+              Email me <ArrowUpRight size={19} />
+            </a>
+            <a className="button secondary" href={contra}>
+              Work with me on Contra <ArrowUpRight size={19} />
+            </a>
+          </div>
+          <a className="email-address" href={email}>
+            dieckmanjustus@gmail.com
           </a>
           <div className="contact-links">
             <a href={github}>
@@ -406,7 +416,7 @@ export default function Home() {
           </span>
           <span>Justus Dieckman</span>
         </a>
-        <p>Focused tools. Working software.</p>
+        <p>Built with code & curiosity.</p>
         <a href="#top">Back to top ↑</a>
       </footer>
     </>

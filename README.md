@@ -4,7 +4,7 @@ A personal portfolio for freelance work, networking, and publicly inspectable pr
 
 - Live: https://justus-dieckman.sage-swift-4852.chatgpt.site
 - GitHub: https://github.com/Hacker-pro-discord/justus-portfolio
-- Contact: https://contra.com/justus_dieckman_a7zjair6
+- Contact: https://contra.com/justus_dieckman_a7ziair6
 
 ## Stack and development
 
@@ -48,10 +48,12 @@ Inspected public README files and implementation on September 5, 2026. This port
 | AI News Hub | `2637653f21ceb34fbeac84b4cf44847ee82c27c0` | RSS retrieval, filters, bookmark and HTML export functions, README |
 | STL Miniature Scraper | `af7097615a7cf787beb02f78c142a6b62b039b44` | current source, provider modules, requirements, README |
 
-The Jinx screenshot comes from `Hacker-pro-discord/Jinx-Cleaner/assets/startup-view.jpg`; its window title border was cropped and it was resized to 1440 × 764 WebP. It is a repository screenshot, not a fabricated UI. Other project visuals are workflow diagrams and icons, not screenshots. The orbital geometry, monogram, and social card are original; no Doctor Who promotional assets are used.
+The Jinx screenshot comes from `Hacker-pro-discord/Jinx-Cleaner/assets/startup-view.jpg`; its window title border was cropped and it was resized to 1440 × 764 WebP. It is a repository screenshot, not a fabricated UI. Other project visuals are workflow diagrams and icons, not screenshots. The cinematic time-vortex and blue telephone-box artwork was generated as an original illustration, then optimized to 201 KB desktop and 65 KB mobile WebP assets. The monogram and social card are original; no Doctor Who promotional assets are used. The site intentionally reflects Doctor Who fandom without official logos or character artwork.
 
-Jinx is described as a triage utility, not an antivirus replacement. Image analysis is model-generated critique, not objective measurement. STL discovery does not guarantee pricing, licensing, availability, or downloads. AI systems work is a small practice section; no unreleased OMEGA link or raw system prompt is published. Contact uses the supplied Contra profile; no private email is exposed.
+Jinx is described as a triage utility, not an antivirus replacement. Image analysis is model-generated critique, not objective measurement. STL discovery does not guarantee pricing, licensing, availability, or downloads. AI systems work is a small practice section; no unreleased OMEGA link or raw system prompt is published. Contact uses the corrected Contra profile and the email explicitly supplied for publication by Justus.
 
 ## Validation
 
 Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing. Sites publication is a separate deployment step; pushing to GitHub alone does not automatically redeploy this site.
+
+

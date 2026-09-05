@@ -1179,3 +1179,499 @@ section[id] {
     padding: 13px 15px;
   }
 }
+/* Personal sci-fi direction: original time-vortex artwork, electric light,
+   and generous reading surfaces. The artwork carries the theme. */
+:root,
+.dark {
+  --background: #040916;
+  --card: #091329;
+  --foreground: #f0f6ff;
+}
+body {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(1px 1px at 38px 72px, #9bbbe866 90%, transparent),
+    radial-gradient(1px 1px at 290px 180px, #87a7da55 90%, transparent),
+    radial-gradient(1px 1px at 410px 365px, #86a4ea44 90%, transparent);
+  background-size:
+    510px 470px,
+    650px 610px,
+    760px 790px;
+}
+.site-header {
+  max-width: none;
+  padding-inline: max(32px, calc((100% - 1280px) /2));
+  height: 86px;
+  background: #040916ec;
+  border-color: #457ec838;
+  position: relative;
+  z-index: 3;
+}
+.site-mark {
+  color: #71dfff;
+  text-shadow: 0 0 22px #007fff88;
+}
+.site-header .nav-contact {
+  border-color: #416798;
+  background: #0d204466;
+}
+.hero {
+  width: 100%;
+  max-width: none;
+  min-height: 840px;
+  display: block;
+  padding: 88px max(48px, calc((100% - 1200px) /2)) 100px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.vortex-art {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: block;
+  overflow: hidden;
+}
+.vortex-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 66% 50%;
+  display: block;
+}
+.hero:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      #040916f5 0%,
+      #040916d9 24%,
+      #04091666 42%,
+      transparent 67%
+    ),
+    linear-gradient(
+      0deg,
+      #040916 0%,
+      #04091600 18%,
+      #04091600 89%,
+      #04091666 100%
+    );
+}
+.hero-copy {
+  max-width: 560px;
+}
+.hero h1 {
+  font-size: clamp(78px, 7.5vw, 108px);
+  font-weight: 600;
+  letter-spacing: -5px;
+  text-shadow: 0 3px 30px #02061088;
+}
+.hero h1 .cyan {
+  color: #86e6ff;
+  text-shadow: 0 0 40px #00aaffaa;
+}
+.hero .eyebrow {
+  color: #9fdbff;
+  letter-spacing: 1.5px;
+}
+.hero .role {
+  color: #c3daf5;
+}
+.hero h2 {
+  font-size: 35px;
+  font-weight: 450;
+  line-height: 1.24;
+}
+.hero h2 span {
+  color: #8edfff;
+}
+.hero-description {
+  max-width: 440px;
+  color: #c0cee0;
+  text-shadow: 0 2px 8px #000;
+}
+.hero-actions {
+  margin-top: 28px;
+}
+.button {
+  border-radius: 7px;
+  min-height: 50px;
+}
+.primary {
+  background: linear-gradient(110deg, #a0efff, #56c9ff);
+  box-shadow: 0 0 26px #159fff40;
+  border: 1px solid #90ddff;
+}
+.primary:hover {
+  box-shadow: 0 0 34px #159fff70;
+  background: #b5f1ff;
+}
+.secondary {
+  background: #06162ddb;
+  border-color: #5485b6;
+}
+.profile-links {
+  color: #bed4ef;
+}
+.skill-strip {
+  background: #061025d9;
+  border-color: #244774;
+}
+.skill-strip span {
+  color: #94badc;
+}
+.skill-strip .section-wrap {
+  min-height: 70px;
+}
+.skill-strip p {
+  color: #d0e4f9;
+}
+.section-heading h2,
+.about-section h2 {
+  font-weight: 450;
+  font-size: 44px;
+  letter-spacing: -1.8px;
+}
+.section-heading .eyebrow,
+.about-section .eyebrow {
+  color: #7fcff4;
+}
+.section-heading > p {
+  color: #a9bfd7;
+}
+.project-card {
+  background: linear-gradient(150deg, #0d1b32e8, #080f22f0);
+  border-color: #2b4f78;
+  box-shadow: 0 8px 40px #0003;
+}
+.project-card:hover {
+  border-color: #7abff3;
+  box-shadow: 0 0 32px #0677e91a;
+}
+.project-visual {
+  border-color: #2d4e70;
+}
+.screenshot {
+  background: radial-gradient(ellipse at top, #1b4071, #07172d);
+}
+.local-workflow {
+  background: radial-gradient(ellipse at center, #41348166, #0a1531);
+}
+.compact-visual.news {
+  background: linear-gradient(120deg, #123c51, #08162c);
+}
+.compact-visual.stl {
+  background: linear-gradient(120deg, #282953, #0b152e);
+}
+.project-category {
+  color: #91c5e4;
+}
+.project-title h3 {
+  color: #eef7ff;
+}
+.project-title > span {
+  color: #90ceff;
+}
+.project-problem {
+  border-color: #5a99cf;
+}
+.tags li {
+  background: #11244080;
+  border-color: #34527c;
+}
+.project-footer {
+  border-color: #294367;
+}
+.services-section {
+  background: linear-gradient(100deg, #09132ae8, #101332dc);
+  border-color: #344273;
+}
+.services-grid svg {
+  color: #8ddfff;
+  filter: drop-shadow(0 0 8px #069aff66);
+}
+.services-grid article + article {
+  border-color: #314672;
+}
+.services-grid article > span {
+  color: #92b7db;
+}
+.about-copy p {
+  color: #c0d1e7;
+}
+.about-copy p + p {
+  color: #a5b9d2;
+}
+.systems-section {
+  background: linear-gradient(115deg, #25204ad9, #0a1b31e8);
+  border-color: #62558f;
+  border-radius: 12px;
+  box-shadow: 0 0 48px #6650b315;
+}
+.systems-icon {
+  background: #382d6540;
+}
+.systems-section .eyebrow {
+  color: #c0b7f1;
+}
+.contact-section {
+  margin-block: 80px 40px;
+  padding: 82px 30px;
+  background:
+    linear-gradient(90deg, #040b1aea, #061027ce),
+    url('/images/vortex.webp') center/cover;
+  border: 1px solid #2d5789;
+  border-radius: 18px;
+  box-shadow: 0 0 75px #0561c315;
+}
+.contact-section h2 {
+  font-size: 58px;
+  font-weight: 450;
+  text-shadow: 0 0 40px #0088ff33;
+}
+.contact-section h2 > span {
+  color: #8ce2ff;
+}
+.contact-section > p:not(.eyebrow) {
+  color: #bcd0e9;
+}
+.contact-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+.email-address {
+  display: block;
+  width: fit-content;
+  margin: 22px auto 0;
+  color: #c5e5ff;
+  font-size: 15px;
+  text-underline-offset: 5px;
+}
+.email-address:hover {
+  text-decoration: underline;
+}
+.contact-links {
+  color: #a6c4e4;
+}
+.site-footer {
+  border-color: #284771;
+}
+@media (min-width: 1700px) {
+  .hero {
+    min-height: 900px;
+    padding-top: 108px;
+  }
+  .hero-copy {
+    max-width: 580px;
+  }
+  .vortex-art img {
+    object-position: center 56%;
+  }
+}
+@media (max-width: 1000px) {
+  .hero {
+    padding-inline: 40px;
+    min-height: 820px;
+  }
+  .hero-copy {
+    max-width: 490px;
+  }
+  .hero h1 {
+    font-size: 86px;
+  }
+  .vortex-art img {
+    object-position: 63% center;
+  }
+  .hero:after {
+    background:
+      linear-gradient(90deg, #040916f5, #040916be 35%, #04091620 90%),
+      linear-gradient(0deg, #040916, transparent 18%);
+  }
+  .hero h2 {
+    font-size: 32px;
+  }
+  .section-heading h2,
+  .about-section h2 {
+    font-size: 37px;
+  }
+  .contact-section h2 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    padding-inline: 20px;
+    height: 76px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 54px;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .vortex-art {
+    position: relative;
+    inset: auto;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    height: 340px;
+    z-index: 0;
+    flex-shrink: 0;
+  }
+  .vortex-art img {
+    object-fit: cover;
+    object-position: 75% 50%;
+    width: 100%;
+    height: 100%;
+  }
+  .vortex-art:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #040916 0%, transparent 36%);
+  }
+  .hero:after {
+    display: none;
+  }
+  .hero-copy {
+    margin-top: -21px;
+    z-index: 1;
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: clamp(3.7rem, 13vw, 5rem);
+    letter-spacing: -3px;
+    margin-top: 22px;
+  }
+  .hero .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.65px;
+  }
+  .hero h2 {
+    font-size: 30px;
+    margin-top: 27px;
+  }
+  .hero-description {
+    color: #b9cce3;
+    max-width: 100%;
+  }
+  .hero .role {
+    font-size: 0.8125rem;
+  }
+  .hero-actions {
+    margin-top: 25px;
+  }
+  .section-heading h2,
+  .about-section h2 {
+    font-size: 34px;
+  }
+  .contact-section {
+    margin-block: 55px 25px;
+    padding: 45px 20px;
+    border-radius: 12px;
+    background:
+      linear-gradient(#040b1add, #061027ee),
+      url('/images/vortex-mobile.webp') 65% center/cover;
+  }
+  .contact-section h2 {
+    font-size: 38px;
+    letter-spacing: -1.4px;
+  }
+  .contact-section > .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.45px;
+  }
+  .contact-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .contact-actions .button {
+    width: 100%;
+    gap: 16px;
+  }
+  .email-address {
+    font-size: 0.875rem;
+  }
+  .contact-links {
+    font-size: 0.8125rem;
+  }
+  .services-grid article {
+    border-color: #304977;
+  }
+  .systems-section {
+    border-color: #51477a;
+  }
+  .skill-strip .section-wrap {
+    padding-block: 16px;
+  }
+  .skill-strip span {
+    font-size: 0.75rem;
+  }
+  .section-heading > p {
+    font-size: 1rem;
+  }
+  .brand > span:last-child {
+    font-size: 0.75rem;
+  }
+  .site-header .brand > span:last-child {
+    max-width: 85px;
+    font-size: 0.6875rem;
+    line-height: 1.5;
+  }
+  .site-header nav {
+    gap: 14px;
+  }
+  .site-header .nav-contact {
+    font-size: 0.75rem;
+    padding: 7px 10px;
+  }
+  .project-visual.screenshot {
+    min-height: 220px;
+    height: auto;
+    padding-bottom: 24px;
+  }
+  .image-label {
+    font-size: 0.75rem;
+  }
+  .screenshot img {
+    border-radius: 5px;
+  }
+  .hero .profile-links {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 360px) {
+  .vortex-art {
+    height: 285px;
+  }
+  .hero .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0;
+  }
+  .hero h2 {
+    font-size: 27px;
+  }
+  .site-header nav {
+    gap: 10px;
+  }
+  .contact-section h2 {
+    font-size: 33px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vortex-art img {
+    animation: drift 20s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    to {
+      transform: scale(1.045);
+    }
+  }
+}

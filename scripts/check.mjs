@@ -26,8 +26,9 @@ check(
   ].every((s) => html.includes(`https://github.com/Hacker-pro-discord/${s}`)),
 );
 check(
-  'Contra contact destination',
-  html.includes('https://contra.com/justus_dieckman_a7zjair6'),
+  'corrected Contra and direct email destinations',
+  html.includes('https://contra.com/justus_dieckman_a7ziair6') &&
+    html.includes('mailto:dieckmanjustus@gmail.com'),
 );
 check(
   'all fragment links resolve',
@@ -51,7 +52,7 @@ check(
 );
 check(
   'local assets exist',
-  [...html.matchAll(/(?:src|href)="(\/[^"#?]+)"/g)].every(
+  [...html.matchAll(/(?:src|srcSet|href)="(\/[^"#?]+)"/gi)].every(
     (m) => m[1] === '/' || existsSync(join(dir, m[1])),
   ),
 );
