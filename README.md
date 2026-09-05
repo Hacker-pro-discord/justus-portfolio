@@ -2,7 +2,7 @@
 
 A personal portfolio for freelance work, networking, and publicly inspectable projects.
 
-- Live: https://justus-dieckman.justerman.chatgpt.site
+- Live: https://blue-box-code.justerman.chatgpt.site
 - GitHub: https://github.com/Hacker-pro-discord/justus-portfolio
 - Contact: https://contra.com/justus_dieckman_a7ziair6
 

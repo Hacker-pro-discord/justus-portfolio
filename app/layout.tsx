@@ -11,7 +11,7 @@ const mono = Geist_Mono({
   subsets: ['latin'],
   display: 'swap',
 });
-const origin = 'https://justus-dieckman.justerman.chatgpt.site';
+const origin = 'https://blue-box-code.justerman.chatgpt.site';
 const title = 'Justus Dieckman — Python, JavaScript & TypeScript Developer';
 const description =
   'Independent developer building focused desktop tools, automation, local AI workflows, scripts, and small features. Explore real projects and work with Justus.';
