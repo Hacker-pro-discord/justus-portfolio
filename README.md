@@ -2,13 +2,13 @@
 
 A personal portfolio for freelance work, networking, and publicly inspectable projects.
 
-- Live: https://blue-box-code.justerman.chatgpt.site
+- Live: https://blue-box-code.netlify.app
 - GitHub: https://github.com/Hacker-pro-discord/justus-portfolio
 - Contact: https://contra.com/justus_dieckman_a7ziair6
 
 ## Stack and development
 
-React 19, TypeScript, Vinext (Next.js-compatible routing on Vite), and CSS. Fully static output; no backend, accounts, database, analytics, or contact-data collection. Hosted publicly with Sites. The Sites starter includes a retained Shadcn component catalog; the portfolio uses semantic HTML and Lucide icons.
+React 19, TypeScript, Vinext (Next.js-compatible routing on Vite), and CSS. Fully static output; no backend, accounts, database, analytics, or contact-data collection. Hosted publicly on the Netlify Free plan. The Sites starter includes a retained Shadcn component catalog; the portfolio uses semantic HTML and Lucide icons.
 
 Use **Node 22.22.0** (see `.node-version`). Node 24.13.1 on Windows exhibited an upstream libuv shutdown assertion after prerendering; Node 22 completes normally.
 
@@ -54,4 +54,4 @@ Jinx is described as a triage utility, not an antivirus replacement. Image analy
 
 ## Validation
 
-Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing. Sites publication is a separate deployment step; pushing to GitHub alone does not automatically redeploy this site.
+Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing. Netlify publication is a separate deployment step; pushing to GitHub alone does not automatically redeploy this site. After building and checking, run `npx netlify-cli deploy --dir dist/client --prod --no-build` while signed into the owning Netlify account. `netlify.toml` specifies the static output and Node version. The `.openai/hosting.json` file records the former Sites host, retained as a backup.
