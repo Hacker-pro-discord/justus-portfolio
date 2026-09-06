@@ -436,6 +436,11 @@ section[id] {
 .project-card:hover .screenshot img {
   transform: translateY(-3px);
 }
+.project-card:is(.jinx, .news) .screenshot {
+  height: auto;
+  min-height: 0;
+  padding: 18px 18px 42px;
+}
 .image-label {
   position: absolute;
   bottom: 12px;

@@ -7,7 +7,6 @@ import {
   Workflow,
   Monitor,
   ScanEye,
-  Rss,
   Boxes,
 } from 'lucide-react';
 const github = 'https://github.com/Hacker-pro-discord';
@@ -20,12 +19,12 @@ const projects = [
     title: 'Jinx Cleaner',
     category: 'WINDOWS DESKTOP · SYSTEM UTILITIES',
     description:
-      'A focused workspace for Windows malware triage and cleanup. Inspect processes, startup persistence, scheduled tasks, and suspicious files in one desktop interface.',
+      'A Windows inspection and cleanup workspace with recoverable quarantine. Review processes, registry startup entries, scheduled tasks, and files before taking action.',
     problem: 'Brings scattered Windows inspection tasks into one place.',
     tech: ['Python', 'Tkinter', 'psutil', 'Windows'],
     repo: 'Jinx-Cleaner',
     details:
-      'Includes SHA-256 hashing, file quarantine, Microsoft Defender scan controls, and an activity log. Heuristic scores support manual investigation; this is not a replacement for antivirus software.',
+      'Version 0.2 adds persistent UUID quarantine, checksum-verified restore without overwriting files, process identity checks before termination, and background scans. SHA-256 and Authenticode support investigation. Heuristic indicators are not malware verdicts; coverage is limited to the documented registry keys and accessible tasks.',
   },
   {
     id: 'analyzer',
@@ -47,13 +46,13 @@ const projects = [
     title: 'AI News Hub',
     category: 'INFORMATION TOOLS · RSS',
     description:
-      'A Windows dashboard that gathers AI lab, open-source, and industry RSS feeds. Search stories, filter categories, save bookmarks, and export an HTML digest.',
+      'A futuristic Windows intelligence desk for AI research, open-source releases, and industry news. Browse a newest-first stream, inspect source health, and read article briefs side by side.',
     problem:
       'Makes a scattered set of AI news feeds easier to browse and revisit.',
     tech: ['Python', 'Tkinter', 'feedparser'],
     repo: 'AI-News-Hub',
     details:
-      'Includes automatic refresh, feed-provided story summaries, opening original articles, and copying links. Feed availability depends on the original publishers.',
+      'Version 0.2 combines and deduplicates all feeds before limiting results, keeps bookmarks in persistent user storage, and isolates source failures. Search, source/channel filters, saved articles, validated original links, and HTML digest export remain available. Summaries come from publishers; there is no offline feed cache.',
   },
   {
     id: 'stl',
@@ -75,13 +74,26 @@ function ProjectVisual({ id }: { id: string }) {
     return (
       <div className="project-visual screenshot">
         <img
-          src="/images/jinx-cleaner.webp"
-          alt="Jinx Cleaner desktop interface showing startup persistence inspection and its fast-action sidebar"
-          width="1440"
-          height="764"
+          src="/images/jinx-cleaner-0.2.0.png"
+          alt="Jinx Cleaner 0.2.0 running on Windows, showing the Files panel with quarantine and restore controls"
+          width="1442"
+          height="952"
           loading="lazy"
         />
-        <span className="image-label">FROM THE PROJECT REPOSITORY</span>
+        <span className="image-label">JINX CLEANER · 0.2.0</span>
+      </div>
+    );
+  if (id === 'news')
+    return (
+      <div className="project-visual screenshot">
+        <img
+          src="/images/ai-news-hub-0.2.0.png"
+          alt="AI News Hub 0.2.0 running on Windows with five online sources, chronological headlines, and an article brief"
+          width="1442"
+          height="932"
+          loading="lazy"
+        />
+        <span className="image-label">AI NEWS HUB · 0.2.0</span>
       </div>
     );
   if (id === 'analyzer')
@@ -113,21 +125,11 @@ function ProjectVisual({ id }: { id: string }) {
   return (
     <div className={`project-visual compact-visual ${id}`}>
       <div className="visual-symbol">
-        {id === 'news' ? (
-          <Rss size={40} strokeWidth={1.3} />
-        ) : (
-          <Boxes size={40} strokeWidth={1.3} />
-        )}
+        <Boxes size={40} strokeWidth={1.3} />
       </div>
       <div>
-        <span className="visual-caption">
-          {id === 'news' ? 'FEEDS → FOCUS' : 'SEARCH → DISCOVER'}
-        </span>
-        <p>
-          {id === 'news'
-            ? 'Collect. Filter. Revisit.'
-            : 'Find the model. Keep the source.'}
-        </p>
+        <span className="visual-caption">SEARCH → DISCOVER</span>
+        <p>Find the model. Keep the source.</p>
       </div>
     </div>
   );

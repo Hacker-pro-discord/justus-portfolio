@@ -26,6 +26,15 @@ check(
   ].every((s) => html.includes(`https://github.com/Hacker-pro-discord/${s}`)),
 );
 check(
+  'both updated desktop projects use current screenshots and functionality',
+  [
+    'jinx-cleaner-0.2.0.png',
+    'ai-news-hub-0.2.0.png',
+    'checksum-verified restore',
+    'source health',
+  ].every((text) => html.includes(text)),
+);
+check(
   'corrected Contra and direct email destinations',
   html.includes('https://contra.com/justus_dieckman_a7ziair6') &&
     html.includes('mailto:dieckmanjustus@gmail.com'),
