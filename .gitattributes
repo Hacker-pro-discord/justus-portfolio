@@ -1,0 +1,2 @@
+# Keep text-based public artwork identical on Windows and Netlify/Linux.
+*.svg text eol=lf
