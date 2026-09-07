@@ -59,7 +59,11 @@ Jinx is described as a triage utility, not an antivirus replacement. Image analy
 
 ## Validation
 
-Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing. Netlify publication is a separate deployment step: on September 5, 2026 the site's repository/branch settings were not configured for Git-triggered builds. Push the verified source to GitHub, then run `npx netlify-cli deploy --site blue-box-code --dir dist/client --prod --no-build` while signed into the owning Netlify account. Verify the production page and both screenshot URLs after deployment. `netlify.toml` specifies the static output and Node version. The `.openai/hosting.json` file records the former Sites host, retained as a backup; this update does not publish to that host or change Netlify's Git integration.
+Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing.
+
+Netlify project `blue-box-code` is connected to `Hacker-pro-discord/justus-portfolio` as of September 7, 2026. Push verified source to `main` to trigger a production build through the repository webhook. Netlify uses a read-only deployment key for this repository. The build runs `npm run build && npm test` with Node 22.22.0 and publishes only `dist/client`, as specified in `netlify.toml`. Check the Netlify deploy log for success, then verify `/`, `/3d-animation`, navigation, and media on the live site.
+
+For a manual fallback, build and test locally, then run `npx netlify-cli deploy --site blue-box-code --dir dist/client --prod --no-build` while signed into the owning Netlify account. The `.openai/hosting.json` file records the former Sites host, retained as a backup; deployment uses the existing Netlify project.
 
 ## 3D & Animation structure
 
