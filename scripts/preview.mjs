@@ -9,6 +9,7 @@ const types = {
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
   '.webp': 'image/webp',
+  '.mp4': 'video/mp4',
   '.woff2': 'font/woff2',
   '.xml': 'application/xml',
   '.txt': 'text/plain',
@@ -20,7 +21,7 @@ http
       const pathname = decodeURIComponent(
         new URL(req.url, 'http://localhost').pathname,
       );
-      const file = resolve(
+      let file = resolve(
         root,
         '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''),
       );
@@ -29,14 +30,47 @@ http
         res.end();
         return;
       }
-      const body = await readFile(file);
+      let body;
+      try {
+        body = await readFile(file);
+      } catch {
+        if (extname(pathname)) throw new Error('Missing file');
+        file = resolve(root, '.' + pathname.replace(/\/$/, '') + '.html');
+        body = await readFile(file);
+      }
+      if (req.headers.range) {
+        const match = /^bytes=(\d+)-(\d*)$/.exec(req.headers.range);
+        const start = match ? Number(match[1]) : -1;
+        const end =
+          match && match[2]
+            ? Math.min(Number(match[2]), body.length - 1)
+            : body.length - 1;
+        if (start < 0 || start > end || start >= body.length) {
+          res
+            .writeHead(416, { 'Content-Range': `bytes */${body.length}` })
+            .end();
+          return;
+        }
+        res.writeHead(206, {
+          'Content-Type': types[extname(file)] || 'application/octet-stream',
+          'Accept-Ranges': 'bytes',
+          'Content-Range': `bytes ${start}-${end}/${body.length}`,
+          'Content-Length': end - start + 1,
+        });
+        res.end(
+          req.method === 'HEAD' ? undefined : body.subarray(start, end + 1),
+        );
+        return;
+      }
       res.writeHead(200, {
         'Content-Type': types[extname(file)] || 'application/octet-stream',
+        'Content-Length': body.length,
+        'Accept-Ranges': 'bytes',
       });
-      res.end(body);
+      res.end(req.method === 'HEAD' ? undefined : body);
     } catch {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Not found');
+      res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+      res.end(await readFile(resolve(root, '404.html')));
     }
   })
   .listen(port, '127.0.0.1', () =>

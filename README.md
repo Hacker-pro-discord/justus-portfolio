@@ -22,15 +22,20 @@ npm test
 npm start
 ```
 
-The local production preview is at http://localhost:4173. Deploy **dist/client**, not the project source or the generated server directory. Build artifacts and environment files are ignored by Git. No runtime secrets are needed.
+The local production preview is at http://localhost:4173. Routes are `/` (overview) and `/3d-animation` (dedicated case study); `/3d-animation/` also works. Unknown paths return a real 404. Navigation uses normal anchors against the static export, so direct visits and links work without client-side routing. The Next.js HTML-link lint rule is disabled intentionally for this static-site architecture. Deploy **dist/client**, not the project source or the generated server directory. Build artifacts and environment files are ignored by Git. No runtime secrets are needed.
 
 ## Editing
 
-- `app/page.tsx`: sections, project descriptions, services, contact links
+- `app/page.tsx`: homepage overview, software projects, services, contact, and the 3D teaser
+- `app/3d-animation/page.tsx`: aircraft case study, character-framework R&D, production flow, and route-specific metadata
+- `app/3d-animation/animation.css`: styles scoped to the new case-study page
+- `components/site-chrome.tsx`: shared header, navigation, and footer
 - `app/globals.css`: responsive design, colors, reduced-motion behavior
 - `app/layout.tsx`: page title, description, canonical URL, social metadata
 - `public/`: current application screenshots, original favicon and social card, robots and sitemap
-- `scripts/check.mjs`: 13 checks of the actual production export
+- `scripts/check.mjs`: route, link, metadata, media and content checks on the production export
+- `docs/public-assets.json`: reviewed public media allowlist, with SHA-256 hashes
+- `docs/animation-content.md`: evidence, asset preparation, and future case-study instructions
 - `scripts/preview.mjs`: local-only static preview server
 
 Update the origin in the layout, sitemap, robots file, and README together when changing domains. `scripts/social-card.py` regenerates the original typographic Open Graph image using Pillow and Windows Segoe UI fonts; it is optional and not part of the build.
@@ -55,3 +60,13 @@ Jinx is described as a triage utility, not an antivirus replacement. Image analy
 ## Validation
 
 Run the checks above after edits. Also inspect desktop and mobile layouts, keyboard navigation, expandable project notes, links, images, and the browser console. Automated artifact checks do not replace browser or screen-reader testing. Netlify publication is a separate deployment step: on September 5, 2026 the site's repository/branch settings were not configured for Git-triggered builds. Push the verified source to GitHub, then run `npx netlify-cli deploy --site blue-box-code --dir dist/client --prod --no-build` while signed into the owning Netlify account. Verify the production page and both screenshot URLs after deployment. `netlify.toml` specifies the static output and Node version. The `.openai/hosting.json` file records the former Sites host, retained as a backup; this update does not publish to that host or change Netlify's Git integration.
+
+## 3D & Animation structure
+
+The homepage retains the existing artwork, typography, colors, software/automation content, and contact links. Its addition is a small aircraft teaser linking to the dedicated page. Shared navigation includes a visible 3D & Animation link on desktop and mobile.
+
+The animation page separates the aircraft production from reusable character-system R&D. Blender produces the cinematic picture. Unreal is presented accurately as a parallel import, scale, scene-assembly, and Sequencer proof. Character retargeting, reusable visemes, and character export to Unreal are not claimed as completed work. An original character visual demonstration remains a future addition.
+
+New public media lives in `public/images/animation/` and `public/media/animation/`. The aircraft visuals are rendered from the actual local models and scene, with insignia removed. The 12-second H.264 preview is silent at the file level, has playback controls, and loads only on request. No source project, character prototype, reference library, audio, or private repository is bundled.
+
+To add a future case study, follow `docs/animation-content.md`. Keep claims tied to inspected work; update the media allowlist only after reviewing each new asset. Keep raw projects and review screenshots outside `public/` and deploy only `dist/client/`. Netlify rewrites in `netlify.toml` serve the exported animation HTML for both URL forms without masking unknown paths.

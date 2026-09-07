@@ -1680,3 +1680,107 @@ body {
     }
   }
 }
+
+/* Shared navigation and the additive 3D teaser. Existing visual theme is retained. */
+.not-found {
+  min-height: 65vh;
+}
+.not-found h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  margin-block: 24px;
+}
+.not-found > p:not(.eyebrow) {
+  color: #b9cce3;
+}
+.site-header nav.portfolio-nav {
+  gap: clamp(16px, 2.1vw, 34px);
+}
+.portfolio-nav [aria-current='page'] {
+  color: #7bdcff;
+}
+.animation-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 70px;
+  border: 1px solid #2d5789;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(115deg, #091a30, #0a1327);
+}
+.animation-teaser-image {
+  display: block;
+  min-width: 0;
+}
+.animation-teaser-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/2;
+}
+.animation-teaser-copy {
+  padding: 35px;
+  align-self: center;
+}
+.animation-teaser-copy .eyebrow {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.animation-teaser-copy h2 {
+  font-size: 38px;
+  font-weight: 450;
+  letter-spacing: -1.4px;
+  margin: 16px 0 20px;
+}
+.animation-teaser-copy > p:not(.eyebrow) {
+  color: #b9cce3;
+  margin-top: 14px;
+}
+.animation-teaser-copy .text-link {
+  margin-top: 24px;
+}
+@media (max-width: 700px) {
+  .site-header:has(.portfolio-nav) {
+    position: relative;
+    height: auto;
+    min-height: 106px;
+    flex-wrap: wrap;
+    padding-block: 17px 10px;
+    gap: 10px;
+  }
+  .site-header:has(.portfolio-nav) .brand > span:last-child {
+    max-width: 85px;
+  }
+  .site-header nav.portfolio-nav {
+    width: 100%;
+    gap: 10px 18px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+  .site-header nav.portfolio-nav > a {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+  }
+  .site-header nav.portfolio-nav .nav-contact {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    padding: 5px 8px;
+  }
+  .site-header nav.portfolio-nav .animation-nav-link {
+    color: #9bddff;
+  }
+  .animation-teaser {
+    grid-template-columns: 1fr;
+    margin-top: 45px;
+  }
+  .animation-teaser-copy {
+    padding: 26px 22px;
+  }
+  .animation-teaser-copy h2 {
+    font-size: 34px;
+  }
+}

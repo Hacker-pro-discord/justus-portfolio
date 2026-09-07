@@ -1,3 +1,4 @@
+import { SiteHeader, SiteFooter } from '../components/site-chrome';
 import {
   ArrowDown,
   ArrowRight,
@@ -137,25 +138,7 @@ function ProjectVisual({ id }: { id: string }) {
 export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#main">
-        Skip to content
-      </a>
-      <header id="top" className="site-header">
-        <a className="brand" href="#top" aria-label="Justus Dieckman home">
-          <span className="site-mark" aria-hidden="true">
-            j<span>d</span>.
-          </span>
-          <span>JUSTUS DIECKMAN</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a className="nav-contact" href="#contact">
-            Let’s talk <ArrowUpRight size={16} />
-          </a>
-        </nav>
-      </header>
+      <SiteHeader />
       <main id="main">
         <section className="hero section-wrap" aria-labelledby="hero-title">
           <picture className="vortex-art">
@@ -376,6 +359,42 @@ export default function Home() {
             </p>
           </div>
         </section>
+        <section
+          className="section-wrap animation-teaser"
+          aria-labelledby="animation-teaser-title"
+        >
+          <a
+            className="animation-teaser-image"
+            href="/3d-animation"
+            aria-label="Explore the aircraft animation case study"
+          >
+            <img
+              src="/images/animation/aircraft-studio.webp"
+              alt="Two locally built aircraft models with canopy, intake, wing and airframe detail under studio lighting"
+              width="1440"
+              height="960"
+              loading="lazy"
+            />
+          </a>
+          <div className="animation-teaser-copy">
+            <p className="eyebrow">ANOTHER SIDE OF THE WORK / 3D</p>
+            <h2 id="animation-teaser-title">
+              3D & Animation<span className="cyan">.</span>
+            </h2>
+            <p>
+              Cinematic scenes, 3D assets, reusable character systems, and
+              AI-assisted Blender/Unreal production.
+            </p>
+            <p>
+              The same approach behind my software and automation: build the
+              pieces, connect the workflow, and iterate toward a finished
+              result.
+            </p>
+            <a className="text-link" href="/3d-animation">
+              Explore 3D & Animation <ArrowUpRight size={18} />
+            </a>
+          </div>
+        </section>
         <section id="contact" className="section-wrap contact-section">
           <p className="eyebrow">
             <span className="status-dot" /> LET’S BUILD SOMETHING USEFUL
@@ -411,16 +430,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="site-footer section-wrap">
-        <a className="brand" href="#top">
-          <span className="site-mark" aria-hidden="true">
-            jd.
-          </span>
-          <span>Justus Dieckman</span>
-        </a>
-        <p>Built with code & curiosity.</p>
-        <a href="#top">Back to top ↑</a>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
