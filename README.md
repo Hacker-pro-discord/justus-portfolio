@@ -4,7 +4,7 @@ A personal portfolio for freelance work, networking, and publicly inspectable pr
 
 - Live: https://blue-box-code.netlify.app
 - GitHub: https://github.com/Hacker-pro-discord/justus-portfolio
-- Contact: https://contra.com/justus_dieckman_a7ziair6
+- Contact: https://contra.com/MadmanInAComputer
 
 ## Stack and development
 

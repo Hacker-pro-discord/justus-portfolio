@@ -432,7 +432,7 @@ export default function AnimationPage() {
             </a>
             <a
               className="button secondary"
-              href="https://contra.com/justus_dieckman_a7ziair6"
+              href="https://contra.com/MadmanInAComputer"
             >
               Work with me on Contra <ArrowUpRight size={18} />
             </a>

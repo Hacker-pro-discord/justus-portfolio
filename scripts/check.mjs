@@ -46,7 +46,7 @@ check(
 );
 check(
   'corrected Contra and direct email destinations',
-  html.includes('https://contra.com/justus_dieckman_a7ziair6') &&
+  html.includes('https://contra.com/MadmanInAComputer') &&
     html.includes('mailto:dieckmanjustus@gmail.com'),
 );
 check(

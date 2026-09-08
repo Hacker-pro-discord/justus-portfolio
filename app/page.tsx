@@ -11,7 +11,7 @@ import {
   Boxes,
 } from 'lucide-react';
 const github = 'https://github.com/Hacker-pro-discord';
-const contra = 'https://contra.com/justus_dieckman_a7ziair6';
+const contra = 'https://contra.com/MadmanInAComputer';
 const email = 'mailto:dieckmanjustus@gmail.com';
 const projects = [
   {
